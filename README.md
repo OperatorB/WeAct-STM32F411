@@ -1,11 +1,19 @@
-
+# Getting started with PlatformIO and arduino framework on Windos.
+<div align="left"><img alt="WeAct STM32F411" src="https://docs.zephyrproject.org/latest/_images/blackpill-v2.jpg" width="300px"/></div>
 
 ## Steps:
 
-- 'Update driver' of STM device with Windows Device Manager [see image]
+- 'Update driver' of STM device with Windows Device Manager
 - install Zadig software
-- connect USB and put STM32F411 to bootloader mode (hold down Boot0 while pressing NRST). In Windows Device Manager you should see 'STM Device in DFU mode'. [see image]
-- use Zadig to switch driver (select 'STM32 BOOTLOADER' then click 'Replace Driver'). After all you should see 'STM32 BOOTLOADER' listed in Device Manager. [see image]
+- connect USB and put STM32F411 to bootloader mode (hold down Boot0 while pressing NRST). In Windows Device Manager you should see 'STM Device in DFU mode'.
+
+![Update driver](/before.png)
+
+- use Zadig to switch driver (select 'STM32 BOOTLOADER' then click 'Replace Driver'). After all you should see 'STM32 BOOTLOADER' listed in Device Manager.
+
+![Zadig](/zadig.png)
+![After](/after.png)
+
 - browse into your .platformio/packages/tool-stm32duino and replace 'dfu-util' with V0.9 (I have tested only V0.9)
 - in PlatformIO .ini file specify :
 
